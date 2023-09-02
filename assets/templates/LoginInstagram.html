@@ -1,0 +1,606 @@
+<header>
+    <style>
+        /* Universal Selectors */
+#root, body, html {
+    height:100%;
+  }
+  
+  body {
+    overflow-y: scroll;
+  }
+  
+  a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin:0;
+    padding:0;
+    border:0;
+    font:inherit;
+    vertical-align: baseline;
+  } 
+  
+  a, a:visited {
+    text-decoration: none;
+  }
+  a:active, .btn:active {
+    opacity:.5;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  body, button, input {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:14px;
+    line-height:18px;
+  }
+  
+  #root, article, main, div, section, header, nav, footer {
+    border: 0 solid #000000;
+    box-sizing: border-box;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin:0;
+    padding:0;
+    position: relative;
+    -webkit-box-align: stretch;
+      -moz-box-align: stretch;
+    -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+    -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+  } /* <--Universal Selectors End */
+  
+  
+  #root {
+    z-index: 0;
+  }
+  
+  .section-all {
+    min-height:100%;
+    overflow:hidden;
+  }
+  
+  .main {
+    background-color: #FFFFFF;
+    order: 4;
+    flex-grow: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -moz-box-ordinal-group: 5;
+    -webkit-box-ordinal-group: 5;
+  }
+  
+  .wrapper {
+    min-height:100%;
+    overflow: hidden;
+  }
+  
+  .wrapper, .article {
+    flex-grow: 1;
+    justify-content: center;
+    -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+    -webkit-box-pack: center;
+      -moz-box-pack: center;
+  }
+  
+  .article {
+    flex-direction: row;
+    margin:0 auto;
+    max-width: 935px;
+    width:100%;
+    -webkit-box-orient: horizontal;
+      -moz-box-orient: horizontal;
+    -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+  }
+  
+  .content {
+    color:#262626;
+    flex-grow:1;
+    justify-content: center;
+    max-width: 350px;
+    margin-top:12px;
+    -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+    -webkit-box-flex: 1;
+      -moz-box-flex: 1;  
+  }
+  
+  .login-box {
+    background: #fff;
+    border: 1px solid #DBDBDB;
+    border-radius: 1px;
+    margin:0 0 10px;
+    padding: 8px 0;
+    /* align-items: center; */
+  }
+  
+  .header {
+    margin: 14.45px auto 12px;
+  }
+  
+  .logo {
+    background: cover no-repeat;
+    width:185px;
+    height:auto;
+    margin: 18px 0 20px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    -moz-box-direction: normal;
+    -webkit-box-direction: normal;
+  }
+  
+  .input-box {
+    margin:auto 40px 6px;
+  }
+  
+  input {
+    height: 37px;
+    border: 1px solid #DBDBDB;
+    border-radius: 3%;
+    background-color: #fafafa;
+    width:100%;
+    font-size:12px;
+    margin: 0;
+    padding: 13px 0 13px 8px;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+  }
+  input#name:focus, input#password:focus {
+    border-color:#9c9c9c;
+  }
+  
+  .button-box {
+    display: block;
+    position: relative;
+    margin: 8px 40px;
+  }
+  .btn {
+    cursor: pointer;
+    width: 100%;
+    padding:0 6px; 
+    background: #4CB5F9;
+    color:#fff;
+    border-radius:8px;
+    border: 0;
+    font-weight:600;
+    font-size: 14px;
+    height: 33px;
+    line-height: 26px;
+    outline: none;
+    white-space: nowrap;
+  }
+  
+  .forgot, .forgot:active, .forgot:hover, .forgot:visited {
+    font-size:12px;
+    margin-top:12px;
+    text-align: center;
+    color:#003569;
+    line-height: 14px!important;
+  }
+  
+  .text {
+    text-align:center;
+    margin:15px;
+    color:#262626;
+    font-size:14px;
+  }
+  
+  .text a, .text a:visited, .text a:hover, .text a:active {
+    color:#3897f0;
+    font-weight: 500;
+    margin-left:3px;
+  }
+
+.hr-container {
+    font-family: 'Grotesque' sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 25px 30px 25px;
+    font-size: 1.09rem;
+    font-weight: 499;
+    color: #7C7373;
+}
+  
+.hr-container hr {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ddd;
+    border: none;
+    margin: 12px 14px 5px 14px;
+}
+
+.login-facebook {
+  display: inline-flex;
+  justify-content: center;
+  color: #385185;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 14px;
+}
+
+.login-facebook img {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+  
+  /* App Store */
+  .app p {
+    line-height: 18px;
+    color:#262626;
+    font-size:14px;
+    text-align:center;
+    margin:10px 20px;
+  }
+  
+  .app-img {
+    flex-direction: row;
+    justify-content: center;
+    margin:10px 0;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+  }
+  
+  .app-img a {
+    margin-right:8px;
+    height: 43.5px;
+  }
+  
+  .app-img img {
+    height:40px;
+  }
+  
+  /* FOOTER */
+  .footer {
+    order: 5;
+    padding: 0 20px;
+    background: #FFFFFF;
+    text-align: center;
+    margin-top: 50px;
+    width: 100%;
+  }
+  
+  .footer-container {
+    display: flex;
+    width: 100%;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    font-size:12px;
+    font-weight:600;
+    margin:0 auto;
+    width:100%;
+    gap: 12px;
+  }
+  
+  .footer-nav {
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .footer-nav ul {
+    margin: auto;
+  }
+
+  .language-copyrigth {
+    display: inline;
+  }
+  
+  .footer-nav ul li {
+    display: inline-flex;
+    margin-bottom:7px;
+    margin-left: 12px;
+  }
+  
+  .footer-nav ul li a {
+    color: #737373;
+    font-weight: 400;
+  }
+  
+  .footer-nav ul li a:hover {
+    text-decoration: underline #003569;
+  }
+
+  .footer span {
+    color:#737373;
+    font-size: 0.75rem;
+  }
+
+  .footer svg {
+    position: relative;
+    top: 2px;
+    width: 13px;
+    height: 13px;
+    margin-right: 8px;
+  }
+
+  .footer-logo {
+    text-transform: initial;
+    font-weight: 400;
+    font-size: 0.79rem;
+    margin-bottom: 40px;
+    color: #737373;
+  }
+  
+  span.language { 
+    color: #737373;
+    margin-right: 8px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 480;
+    position: relative;
+    vertical-align: top;
+  }
+  
+  .select {
+    cursor: pointer;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    position: absolute;
+    left:0;
+    width: 100%;
+  }
+  
+  /* Media Queries */
+  @media (max-width:450px) {
+    .main {
+      background-color: #fff;
+    }
+  
+    .content {
+      max-width: 100%;
+      margin-top: 0;
+      margin-bottom: 15px;
+      justify-content: space-between;
+    }
+  
+    .login-box {
+      background-color: transparent;
+      border:none;
+    }
+  
+    .logo {
+      background: cover no-repeat;
+      width:175px;
+      height:auto;
+      margin:0 auto;
+    }
+  
+    .btn {
+      cursor: pointer;
+      width: 100%;
+      padding:0 8px; 
+      background: #3897f0;
+      border:1px solid #3897f0;
+      color:#fff;
+      border-radius:3px;
+      font-weight:600;
+      font-size: 14px;
+      height: 28px;
+      line-height: 26px;
+      outline: none;
+      white-space: nowrap;
+    }
+  
+    .input-box {
+      border: 1px solid #DBDBDB;
+      border-radius: 3px;
+      height: 36px;
+      background: #fafafa;
+      position: relative;
+    }
+  
+    input {
+      border: 0;
+      background-color: #fafafa;
+      width:100%;
+      font-size:12px;
+      margin: 0;
+      padding: 9px 0 7px 8px;
+      outline: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      box-sizing: border-box;
+    }
+  
+    .input-box:hover:active, .input-box:focus {
+      border-color:#737373;
+    }
+  
+  }
+  
+  @media only screen and (max-width:875px) {
+    .footer-container {
+      text-align: center;
+      padding:10px 0;
+    }
+    .footer-container,  .footer-nav ul {
+      margin:0 auto;
+      min-width: auto;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+    }
+  
+  }
+    </style>
+</header>
+<body>
+    <span id="root">
+      <section class="section-all">
+  
+        <!-- 1-Role Main -->
+        <main class="main" role="main">
+          <div class="wrapper">
+            <article class="article">
+              <div class="content">
+                <div class="login-box">
+                  <div class="header">
+                    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Instagram">
+                  </div><!-- Header end -->
+                  <div class="form-wrap">
+                    <form class="form">
+  
+                      <div class="input-box">
+                        <input type="text" id="name" name="email" aria-describedby="" placeholder="Teléfono, usuario o correo electrónico" aria-required="true" maxlength="30" autocapitalize="off" autocorrect="off" name="username" value="" required>
+                      </div>  
+  
+                      <div class="input-box">
+                        <input type="password" name="pass" name="password" id="password" placeholder="Contraseña" aria-describedby="" maxlength="30" aria-required="true" autocapitalize="off" autocorrect="off" required>
+                      </div>  
+  
+                      <span class="button-box">
+                        <button class="btn">Iniciar sesión</button>
+                      </span>  
+
+                      <span class="hr-container">
+                        <hr />
+                        <h3>o</h3>
+                        <hr />
+                      </span>
+
+                      <span class="login-facebook">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png" alt="Logo Facebook"><h5> Iniciar sesión con Facebook</h5>
+                      </span>
+  
+                      <a class="forgot" href="">¿Olvidaste tu contraseña?</a>
+                    </form>
+                  </div> <!-- Form-wrap end -->
+                </div> <!-- Login-box end -->
+  
+                <div class="login-box">
+                  <p class="text">¿No tienes una cuenta?<a href="#">Regístrate</a></p>
+                </div> <!-- Signup-box end -->
+  
+                <div class="app">
+                  <p>Descarga la app.</p>
+                  <div class="app-img">
+                      <a href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&amp;ct=igweb.loginPage.badge&amp;mt=8">
+                      <img src="https://raw.githubusercontent.com/solidsnk86/formularioWeb-1/master/ZKu1RMHF20e.png" >
+                      </a>
+                      <a href="https://play.google.com/store/apps/details?id=com.instagram.android&amp;referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26utm_medium%3Dbadge">
+                      <img src="https://raw.githubusercontent.com/solidsnk86/formularioWeb-1/master/0BpxdgM3WUr.png">
+                    </a>  
+                  </div>  <!-- App-img end-->
+                </div> <!-- App end -->
+              </div> <!-- Content end -->
+            </article>
+          </div> <!-- Wrapper end -->
+        </main>
+  
+        <!-- 2-Role Footer -->
+        <footer class="footer" role="contentinfo">
+          <div class="footer-container">
+  
+            <nav class="footer-nav" role="navigation">
+              <ul>
+                <li><a href="">Meta</a></li>
+                <li><a href="">Información</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="" style="text-decoration: none;">Empleo</a></li>
+                <li><a href="">Ayuda</a></li>
+                <li><a href="">API</a></li>
+                <li><a href="">Privacidad</a></li>
+                <li><a href="" style="text-decoration: none;">Condiciones</a></li>
+                <li><a href="" style="text-decoration: none;">Ubicaciones</a></li>
+                <li><a href="" style="text-decoration: none;">Instagram Lite</a></li><br>
+                <li><a href="">Threads</a></li>
+                <li><a href="" style="text-decoration: none;">Subir contactos y no usuarios</a></li>
+                <li><a href="">Meta Verified</a></li>
+              </ul>
+            </nav>
+            
+            <article class="language-copyrigth">
+            <span class="language">Español
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+              </svg>
+              <select name="language" class="select" onchange="la(this.value)">
+                  <option value="af">Afrikaans</option>
+                  <option value="sq">Shqip (Albanian)</option>
+                  <option value="am">አማርኛ (Amharic)</option>
+                  <option value="ar">العربية (Arabic)</option>
+                  <option value="hy">Հայերեն (Armenian)</option>
+                  <option value="az">Azərbaycan (Azerbaijani)</option>
+                  <option value="eu">Euskara (Basque)</option>
+                  <option value="be">Беларуская (Belarusian)</option>
+                  <option value="bn">বাংলা (Bengali)</option>
+                  <option value="bs">Bosanski (Bosnian)</option>
+                  <option value="bg">Български (Bulgarian)</option>
+                  <option value="ca">Català (Catalan)</option>
+                  <option value="ceb">Cebuano</option>
+                  <option value="ny">Chichewa</option>
+                  <option value="zh-CN">中文(简体) (Chinese Simplified)</option>
+                  <option value="zh-TW">中文(繁體) (Chinese Traditional)</option>
+                  <option value="co">Corsu (Corsican)</option>
+                  <option value="hr">Hrvatski (Croatian)</option>
+                  <option value="cs">Čeština (Czech)</option>
+                  <option value="da">Dansk (Danish)</option>
+                  <option value="nl">Nederlands (Dutch)</option>
+                  <option value="en">English</option>
+                  <option value="eo">Esperanto</option>
+                  <option value="et">Eesti (Estonian)</option>
+                  <option value="tl">Filipino</option>
+                  <option value="fi">Suomi (Finnish)</option>
+                  <option value="fr">Français (French)</option>
+                  <option value="fy">Frysk (Frisian)</option>
+                  <option value="gl">Galego (Galician)</option>
+                  <option value="ka">ქართული (Georgian)</option>
+                  <option value="de">Deutsch (German)</option>
+                  <option value="el">Ελληνικά (Greek)</option>
+                  <option value="gu">ગુજરાતી (Gujarati)</option>
+                  <option value="ht">Kreyòl Ayisyen (Haitian Creole)</option>
+                  <option value="ha">Hausa</option>
+                  <option value="haw">ʻŌlelo Hawaiʻi (Hawaiian)</option>
+                  <option value="iw">עִבְרִית (Hebrew)</option>
+                  <option value="hi">हिन्दी (Hindi)</option>
+                  <option value="hmn">Hmoob (Hmong)</option>
+                  <option value="hu">Magyar (Hungarian)</option>
+                  <option value="is">Íslenska (Icelandic)</option>
+                  <option value="ig">Igbo</option>
+                  <option value="id">Bahasa Indonesia (Indonesian)</option>
+                  <option value="ga">Gaeilge (Irish)</option>
+                  <option value="it">Italiano (Italian)</option>
+                  <option value="ja">日本語 (Japanese)</option>
+                  <option value="jw">Jawa (Javanese)</option>
+                  <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                  <option value="kk">Қазақша (Kazakh)</option>
+                  <option value="km">ភាសាខ្មែរ (Khmer)</option>             
+              </select>
+              
+              </select>
+            </span>
+            <span class="footer-logo">&copy; 2023 Instagram from Meta</span>
+          </div> <!-- Footer container end -->
+        </article>
+        </footer>
+        
+      </section>
+    </span> <!-- Root -->
+  
+    <!-- Select Link -->
+    <script>
+
+      const loginButton = document.querySelector('.btn');
+      const nameValue = document.getElementById('name').value;
+      const passwordValue = document.getElementById('password').value;
+
+      loginButton.onclick = function() {
+        console.log("Nombre de usuario:" + nameValue);
+        console.log("Contraseña" + passwordValue);
+      }
+
+    </script>
+  </body>

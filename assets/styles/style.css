@@ -1,0 +1,128 @@
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background-color: #FAFAFA;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.tarjetas-html {
+    background-color: #fafafa;
+    border: 1px solid #DBDBDB;
+    margin: auto 20px;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.tarjetas-html li {
+    list-style: decimal;
+    margin: 5px;
+}
+
+/* Pago Exitoso */
+.body-container-pago {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background-color: #eaeaea;
+}
+
+.body-container-pago li,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.container-pago {
+    background-color: #FAFAFA;
+    border-radius: 3px;
+    width: 400px;
+    margin: 20px auto;
+}
+
+.container-pago hr {
+    margin: 0 20px 0 20px;
+    border: 0.1px solid #e2e0e0;
+    border-radius: 25%;
+}
+
+.header-container-pago {
+    text-align: center;
+}
+
+#check-circle {
+    margin: 14px 0 0 0;
+    color: green;
+    font-size: 2.5rem;
+}
+
+.pago-exitoso {
+    margin: auto 14px;
+}
+
+.pago-exitoso li a {
+    color: #1877F2;
+    font-size: small;
+}
+
+.pago-exitoso-contact {
+    padding: 0 0 14px 0;
+}
+
+.container-detalle {
+    color: #777;
+    background-color: #FAFAFA;
+    border: 0.1px solid #DBDBDB;
+    border-radius: 3px;
+    margin: 0 20px 0 20px;
+    padding: 10px 5px 10px 5px;
+}
+
+.container-detalle p {
+    text-align: center;
+}
+
+.container-detalle li p {
+    text-align: left;
+}
+
+/* Procesando pago */
+.container-card-proceso {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background-color: #eaeaea;
+    text-align: center;
+    width: 360px;
+    margin: 20px auto;
+}
+
+.container-proceso {
+    background-color: #FAFAFA;
+    border-radius: 1%;
+    padding: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.274);
+}
+
+.container-proceso hr {
+    background-color: #FAFAFA;
+    margin: 0 20px 0 20px;
+    border-radius: 25%;
+    height: 0.1px;
+}
+
+.procesando {
+    margin: 9px;
+}
+
+/* Footer */
+footer {
+	margin-top: 20px;
+	text-align: center;
+    font-weight: bold;
+    text-shadow: 0 0 1px #000;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(0, 140, 255);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
