@@ -18,6 +18,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+/** 404 */
+window.addEventListener('error', function (e) {
+    if (e && e.target && e.target.src && e.target.src.includes('404')) {
+        window.location.href = 'error404.html';
+    }
+});
+
 
 
 
