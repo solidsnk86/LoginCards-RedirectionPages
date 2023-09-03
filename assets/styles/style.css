@@ -6,7 +6,7 @@ body {
 }
 
 .tarjetas-html {
-    background-color: #fafafa;
+    background-color: #F6F8FA;
     border: 1px solid #DBDBDB;
     margin: auto 20px;
     padding: 25px;
@@ -17,6 +17,35 @@ body {
     list-style: decimal;
     margin: 5px;
 }
+
+.tarjetas-html li:hover, 
+a:hover {
+    text-decoration: underline;
+}
+
+.drop-item-list {
+    cursor: pointer;
+}
+
+.tarjetas-html .sub-item-list {
+    display: none;
+}
+
+.tarjetas-html .sub-item-list li {
+    list-style: none;
+    padding-left: 14px;
+}
+
+.cd {
+    position: relative;
+    top: 2px;
+}
+
+.rotated {
+    transform: rotate(90deg);
+    transition: .3s all;
+}
+
 
 /* Pago Exitoso */
 .body-container-pago {
@@ -39,7 +68,7 @@ a {
 
 .container-pago hr {
     margin: 0 20px 0 20px;
-    border: 0.1px solid #e2e0e0;
+    border: 0.1px solid #eaeaea;
     border-radius: 25%;
 }
 
