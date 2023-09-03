@@ -19,7 +19,7 @@ body {
 
 .content {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -34,9 +34,10 @@ body {
   margin-right: 7rem;
 }
 
-.name-content .logo {
-  font-size: 3.5rem;
-  color: #1877f2;
+.login-card p {
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 10px 0 20px 0;
 }
 
 .name-content p {
@@ -52,28 +53,27 @@ form {
   padding: 2rem;
   width: 530px;
   height: 380px;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 15%), 0 8px 16px rgb(0 0 0 / 15%);
 }
 
 form input {
   outline: none;
-  padding: 0.8rem 1rem;
+  padding: 1.8rem 1rem;
   margin-bottom: 0.8rem;
   font-size: 1.1rem;
+  border-radius: 5px;
+  border: 1px solid #DDDFE2;
 }
 
-form input:focus {
-  border: 1.8px solid #1877f2;
-}
 
 form .login {
   outline: none;
   border: none;
   background: #1877f2;
-  padding: 0.8rem 1rem;
-  border-radius: 0.4rem;
-  font-size: 1.1rem;
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
   color: #fff;
 }
 
@@ -110,6 +110,15 @@ form .create-account {
 form .create-account:hover {
   background: #03ad06;
   cursor: pointer;
+}
+
+.login-card-footer {
+  text-align: center;
+  padding: 16px 0 26px 0;
+}
+
+.login-card-footer a {
+  margin: auto 5px;
 }
 
 /* //.........Media Query.........// */
@@ -163,8 +172,8 @@ form .create-account:hover {
   }
 
   form {
-    width: 300px;
-    height: fit-content;
+    width: 400px;
+    height: 310px;
   }
 
   form input {
@@ -173,7 +182,8 @@ form .create-account:hover {
   }
 
   form .login {
-    font-size: 1.5rem;
+    font-size: 2.1rem;
+    font-weight: 600;
   }
 
   form a {
@@ -237,21 +247,22 @@ form .create-account:hover {
     </style>
   </head>
   <body>
-    <div class="content">
-      <div class="flex-div">
+    <main class="content">
+      <header class="flex-div">
         <div class="name-content">
-          <h1 class="logo">Facebook</h1>
-          <p>Connect with friends and the world around you on Facebook.</p>
+          <img src="../img/dF5SId3UHWd-logo.svg" width="245" alt="">
         </div>
-        <form method="POST">
-          <input type="text" name="email" placeholder="Email or Phone Number" required />
-          <input type="password" name="pass" placeholder="Password" required>
-          <button class="login">Log In</button>
-          <a href="#">Forgot Password ?</a>
-          <hr>
-          <button class="create-account">Create New Account</button>
+        <form method="POST" class="login-card">
+          <p>Iniciar sesión en Facebook</p>
+          <input type="text" name="email" placeholder="Correo electrónico o número de teléfono" required />
+          <input type="password" name="pass" placeholder="Contraseña" required>
+          <button class="login">Iniciar sesión</button>
+          <div class="login-card-footer">
+            <a>¿Olvidaste tu cuenta?</a> ·
+            <a href="">Regístrate en Facebook</a>
+          </div>  
       </form>
-      </div>
-    </div>
+      </header>
+    </main>
   </body>
 </html>
